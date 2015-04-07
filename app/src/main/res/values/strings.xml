@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">RUDEtronome v1.0</string>
+    <!-- editText -->
+    <string name="editTextTextPeakBPM">80</string>
+    <string name="editTextTextDuration">4</string>
+    <string name="editTextTextStartBPM">80</string>
+    <!--textView -->
+    <string name="textViewBPM">BPM</string>
+    <string name="textViewCurrentBPM">Current BPM</string>
+    <string name="textViewDebugger">Debugger</string>
+    <string name="textViewDuration">Duration</string>
+    <string name="textViewMinutes">Minutes</string>
+    <string name="textViewPeakTempo">Peak Tempo</string>
+    <string name="textViewStartTempo">Start Tempo</string>
+    <string name="textViewTimeElapsed">Time Elapsed</string>
+</resources>

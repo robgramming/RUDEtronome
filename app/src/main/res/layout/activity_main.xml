@@ -1,0 +1,199 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:background="#ff236467">
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:background="#ff236467">
+        <!-- Start BPM -->
+        <!-- Start Tempo Text View -->
+        <TextView
+            android:id="@+id/textViewStartBPM"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:paddingTop="4dp"
+            android:text="@string/textViewStartTempo"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ff0e1e1e" />
+        <!-- startBPM Edit Text -->
+        <EditText
+            android:gravity="center"
+            android:inputType="number"
+            android:id="@+id/editTextStartBPM"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textViewStartBPM"
+            android:layout_width="120dp"
+            android:text="@string/editTextTextStartBPM" />
+        <!-- BPM Text View -->
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/editTextStartBPM"
+            android:layout_width="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:text="@string/textViewBPM"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ff0e1e1e" />
+        <!-- startBPM Seek Bar -->
+        <SeekBar
+            android:id="@+id/seekBarStartBPM"
+            android:layout_below="@id/editTextStartBPM"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:max="200"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:progress="40" />
+        <!-- Peak BPM -->
+        <!-- Peak Tempo Text View -->
+        <TextView
+            android:id="@+id/textViewPeakBPM"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/seekBarStartBPM"
+            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:paddingTop="4dp"
+            android:text="@string/textViewPeakTempo"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ff0e1e1e" />
+        <!-- peakBPM Edit Text -->
+        <EditText
+            android:gravity="center"
+            android:id="@+id/editTextPeakBPM"
+            android:inputType="number"
+            android:layout_below="@id/seekBarStartBPM"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textViewPeakBPM"
+            android:layout_width="120dp"
+            android:text="@string/editTextTextPeakBPM" />
+        <!-- BPM Text View -->
+        <TextView
+            android:layout_below="@id/seekBarStartBPM"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/editTextPeakBPM"
+            android:layout_width="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:text="@string/textViewBPM"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ff0e1e1e" />
+        <!-- peakBPM Seek Bar -->
+        <SeekBar
+            android:id="@+id/seekBarPeakBPM"
+            android:layout_below="@id/editTextPeakBPM"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:max="200"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:progress="40" />
+        <!-- Duration -->
+        <!-- Duration Text View -->
+        <TextView
+            android:id="@+id/textViewDuration"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/seekBarPeakBPM"
+            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:paddingTop="4dp"
+            android:text="@string/textViewDuration"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ff0e1e1e" />
+        <!-- Duration Edit Text -->
+        <EditText
+            android:gravity="center"
+            android:id="@+id/editTextDuration"
+            android:inputType="number"
+            android:layout_below="@id/seekBarPeakBPM"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textViewDuration"
+            android:layout_width="120dp"
+            android:text="@string/editTextTextDuration" />
+        <!-- Minutes Text View -->
+        <TextView
+            android:layout_below="@id/seekBarPeakBPM"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/editTextDuration"
+            android:layout_width="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:text="@string/textViewMinutes"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ff0e1e1e" />
+        <!-- Duration Seek Bar -->
+        <SeekBar
+            android:id="@+id/seekBarDuration"
+            android:layout_below="@id/editTextDuration"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:max="15"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:progress="3"/>
+        <!-- Play Button -->
+        <!-- Play/Pause Image Button -->
+        <ImageButton
+            android:id="@+id/imageButtonPlay"
+            android:layout_below="@+id/seekBarDuration"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:src="@android:drawable/ic_media_play"
+            android:background="#ff1b4143" />
+        <!-- Data Display -->
+        <!-- Current BPM Text View -->
+        <TextView
+            android:id="@+id/textViewCurrentBPM"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/imageButtonPlay"
+            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:paddingTop="8dp"
+            android:text="@string/textViewCurrentBPM"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ff0e1e1e" />
+        <!-- Current BPM Indicated Text View -->
+        <TextView
+            android:id="@+id/textViewCurrentBPMIndicated"
+            android:layout_below="@id/textViewCurrentBPM"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingBottom="0px"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ff0e1e1e"
+            android:textSize="70dp" />
+        <!-- Time Elapsed Text View -->
+        <TextView
+            android:id="@+id/textViewTimeElapsed"
+            android:layout_below="@id/imageButtonPlay"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textViewCurrentBPM"
+            android:layout_width="150dp"
+            android:paddingTop="8dp"
+            android:text="@string/textViewTimeElapsed"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ff0e1e1e" />
+        <!-- Time Elapsed Indicated Text View -->
+        <TextView
+            android:id="@+id/textViewTimeElapsedIndicated"
+            android:layout_below="@id/textViewTimeElapsed"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textViewCurrentBPM"
+            android:layout_width="wrap_content"
+            android:text="0:00"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ff0e1e1e"
+            android:textSize="70dp" />
+    </RelativeLayout>
+</ScrollView>
